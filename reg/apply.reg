@@ -1,0 +1,39 @@
+Windows Registry Editor Version 5.00
+
+; Silences the "We can't open this 'ms-gamebar' link" popup on Windows editions
+; without Xbox Game Bar. Registers systray.exe (a do-nothing Windows stub) as the
+; handler for the Game Bar link types, machine-wide. Double-click to import (admin).
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\ms-gamebar]
+@="URL:ms-gamebar"
+"URL Protocol"=""
+"NoOpenWith"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\ms-gamebar\shell\open\command]
+@="C:\\Windows\\System32\\systray.exe"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\ms-gamebarservices]
+@="URL:ms-gamebarservices"
+"URL Protocol"=""
+"NoOpenWith"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\ms-gamebarservices\shell\open\command]
+@="C:\\Windows\\System32\\systray.exe"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\ms-gamingoverlay]
+@="URL:ms-gamingoverlay"
+"URL Protocol"=""
+"NoOpenWith"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\ms-gamingoverlay\shell\open\command]
+@="C:\\Windows\\System32\\systray.exe"
+
+[HKEY_CURRENT_USER\Software\Microsoft\GameBar]
+"UseNexusForGameBarEnabled"=dword:00000000
+"ShowStartupPanel"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\GameDVR]
+"AppCaptureEnabled"=dword:00000000
+
+[HKEY_CURRENT_USER\System\GameConfigStore]
+"GameDVR_Enabled"=dword:00000000

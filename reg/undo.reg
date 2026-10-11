@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+; Removes the silent handlers added by apply.reg. Only use this if you have NOT
+; since installed Xbox Game Bar (it would remove Game Bar's own registration).
+; The per-user Game Bar toggles are left as they are.
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\ms-gamebar]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\ms-gamebarservices]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\ms-gamingoverlay]
